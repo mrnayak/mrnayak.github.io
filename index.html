@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -204,6 +205,12 @@
     h5 {
       font-size: 14px;
     }
+    a {
+      color: #2a5db0;
+    }
+    a:hover, a:focus {
+      color: #3a5da0;
+    }
   </style>
 
 
@@ -282,9 +289,10 @@
                       <ul class="nav navbar-nav">
                         <li class="active"><a href="#" id = "summary">Summary</a></li>
 						<li><a href="#" id = "diagnosis">Diagnosis</a></li>
+            <li><a href="#" id = "medication">Medications</a></li>
                         <li><a href="#" id = "results">Lab Results</a></li>
                         <li><a href="#" id = "next">Next Steps</a></li>
-						<li><a href="#" id = "medication">Medications</a></li>
+						
                       </ul>
                     </div><!--/.nav-collapse -->
                   </div>
@@ -292,9 +300,11 @@
               </div>
               <div id = "content-area">
                 <div class="col-sm-9 content" id = "summary-cont" style="background: #fff;  min-height: 300px; border-radius:4px;border-color: #eee; padding: 30px;">
-                  <div class="row date-app">
+                  <div class="row date-app" style="text-align: center;">
                     <h4><i class="fa fa-calendar-o" aria-hidden="true"></i> Appointment Date 05/02/2017</h4>
                   </div>
+
+                  <hr/>
 
                   <div class="row">
                     <h5><i class="fa fa-sticky-note-o" aria-hidden="true"></i> Purpose of Visit</h5>
@@ -302,8 +312,15 @@
                   </div>
 
                   <div class="row">
-                    <h5><i class="fa fa-comment-o" aria-hidden="true"></i> Doctor's notes </h5>
-                    <p><i class="fa fa-user-md" aria-hidden="true"></i> Doctor John Smith</p>
+                    <h5><i class="fa fa-user-md" aria-hidden="true"></i> Doctor</h5>
+                    <blockquote>
+                      <p>John Smith</p>
+                      <div style="padding-left: 30px">Call: (919) 260-8048<br/><a>Send message</a></div>
+                    </blockquote>
+                  </div>
+
+                  <div class="row">
+                    <h5><i class="fa fa-comment-o" aria-hidden="true"></i> Doctor's Notes </h5>
                     <blockquote>
                       <p>Your symptoms are consistent with anemia. Anemia is a common condition caused by a lower than normal amount of red blood cells. We will run tests for underlying conditions, but considering you have no other symptoms this is likely caused by iron deficiency. There are some strategies you may consider to help improve your red blood cell count. These include:</p>
                       <ul>
@@ -336,19 +353,18 @@
                 </div>
 
 					<div class="col-sm-9 content" id = "diagnosis-cont" style="background: #fff;  min-height: 300px; border-radius:4px;border-color: #eee; padding: 30px;">
-						<div class="row date-app">
+						<div class="row date-app" style="text-align: center;">
 							 <h4><i class="fa fa-calendar-o" aria-hidden="true"></i> Appointment Date 05/02/2017</h4>
 						</div>
 						<hr/>
 						<div class="row">
-							<i class="fa fa-sticky-note-o" aria-hidden="true"></i> Anemia <br/> <br/>
+							<h5><i class="fa fa-sticky-note-o" aria-hidden="true"></i> Diagnosis </h5>
 							<blockquote>
-								<p>This is a condition marked by a deficiency of red blood cells or of hemoglobin in the blood, resulting in pallor and weariness.</p>
+								<b>Anemia</b><p>This is a condition marked by a deficiency of red blood cells or of hemoglobin in the blood, resulting in pallor and weariness.</p>
 							</blockquote>
 						</div>
-						<hr/>
 						<div class="row">
-							<i class="fa fa-question-circle-o" aria-hidden="true"></i> FAQ
+							<h5><i class="fa fa-question-circle-o" aria-hidden="true"></i> FAQ</h5>
 							<p><b> What are the symptoms of Anemia?</b><br/>
 							<i>Easy fatigue and loss of energy. Unusually rapid heart beat, particularly with exercise. Shortness of breath and headache, particularly with exercise. Difficulty concentrating and Dizziness</i> </p>
 							<p><b> What is the cause of Anemia? </b><br/>
@@ -369,20 +385,19 @@
 					</div>
 
                       <div class="col-sm-9 content" id = "results-cont" style="background: #fff;  min-height: 300px; border-radius:4px;border-color: #eee; padding: 30px;">
-                        <div class="row date-app">
+                        <div class="row date-app" style="text-align: center;">
                          <h4> <i class="fa fa-calendar-o" aria-hidden="true"></i> Appointment Date 05/02/2017 </h4>
                         </div>
                         <hr/>
                         <div class="row">
-                          <i class="fa fa-sticky-note-o" aria-hidden="true"></i> Doctor's Summary <br/> <br/>
+                          <h5><i class="fa fa-sticky-note-o" aria-hidden="true"></i> Doctor's Summary </h5>
                           <blockquote>
                             <p>Consistent with your sympoms, these labs indicate that you have Anemia. At your next visit we will try to determine the cause.</p>
                             <p><i class="fa fa-check-circle" style="color: green"></i> All labs have been reviewed by Dr. Smith.</p>
                           </blockquote>
                         </div>
-                        <hr/>
                         <div class="row">
-                         <i class="fa fa-file-o" aria-hidden="true"></i> Lab Results <br/> <br/>
+                         <h5><i class="fa fa-file-o" aria-hidden="true"></i> Lab Results </h5>
 
                         <div class = "lab">
                           <div class="row vertical-align">
@@ -390,7 +405,7 @@
                               RBC Count
                             </div>
                             <div class="col-sm-9">
-                              <img src = "./images/rbccount.png" />
+                              <img src = "./images/rbccount.PNG" />
 
                               <div class="row" style="text-align: center;"><div class="col-sm-12">
                               <a style="padding:5px; color:navy;" data-toggle="collapse" data-target="#learnmore1">Learn more</a>
@@ -413,7 +428,7 @@
                               Hemoglobin
                             </div>
                             <div class="col-sm-9">
-                              <img src = "./images/hemoglobin.png" />
+                              <img src = "./images/hemoglobin.PNG" />
 
                               <div class="row" style="text-align: center;"><div class="col-sm-12">
                               <a style="padding:5px; color:navy;" data-toggle="collapse" data-target="#learnmore2">Learn more</a>
@@ -436,7 +451,7 @@
                               Hematocrit
                             </div>
                             <div class="col-sm-9">
-                              <img src = "./images/Hematocrit.png" />
+                              <img src = "./images/hematocrit.PNG" />
 
                               <div class="row" style="text-align: center;"><div class="col-sm-12">
                               <a style="padding:5px; color:navy;" data-toggle="collapse" data-target="#learnmore3">Learn more</a>
@@ -455,7 +470,7 @@
                         </div>
                       </div>
                       <div class="col-sm-9 content" id = "next-cont" style="background: #fff;  min-height: 300px; border-radius:4px;border-color: #eee; padding: 30px;">
-                        <div class="row date-app">
+                        <div class="row date-app" style="text-align: center;">
                          <h4> <i class="fa fa-calendar-o" aria-hidden="true"></i> Appointment Date 05/02/2017 </h4>
                         </div>
                         <hr/>
@@ -463,32 +478,35 @@
                           <form class="form-horizontal">
                             <fieldset>
 
-                              <div class="checkbox">
+                              <div id="nextSteps" class="checkbox">
                                 <label>
-                                  <input type="checkbox"> Schedule next appointment
+                                  <input type="checkbox" id="check1"> Schedule next appointment
                                 </label>
                               </div>
                               <div class="checkbox">
                                 <label>
-                                  <input type="checkbox"> Pickup medicine
+                                  <input type="checkbox" id="check2"> Pickup medicine
                                 </label>
                               </div>
                               <div class="checkbox">
                                 <label>
-                                  <input type="checkbox"> Read lab result
+                                  <input type="checkbox" id="check3"> Read lab result
                                 </label>
                               </div>
                               <div class="checkbox">
                                 <label>
-                                  <input type="checkbox"> Ask questions
+                                  <input type="checkbox" id="check4"> Ask questions
                                 </label>
                               </div>
+                              <div>
+                                <button type="button" class = "btn btn-success" id="done" style="float:right;display:none">Completed</button>
+                              </div> 
                             </fieldset>
                           </form>
                         </div>
                       </div>
 					   <div class="col-sm-9 content" id = "medication-cont" style="background: #fff;  min-height: 300px; border-radius:4px;border-color: #eee; padding: 30px;">
-                        <div class="row date-app">
+                        <div class="row date-app" style="text-align: center;">
                          <h4> <i class="fa fa-calendar-o" aria-hidden="true"></i> Appointment Date 05/02/2017 </h4>
                         </div>
                         <hr/>
@@ -539,7 +557,39 @@
 
                     </div>
                   </div>
-
+    <div id = "nextStepsInfo" class = "col-sm-9 content" style="background: rgb(255, 255, 255); min-height: 200px; border-radius: 4px; border-color: rgb(238, 238, 238); padding: 30px; display: none; margin-left:24.5%; width:77%; "> 
+    <div id="step1" style="display:none">
+        <span>Schedule next appointment</span>
+        <br><span>Name: James Anderson</span>
+        <br><span>Website: www.james.com</span>
+        <br><span>Phone Number: +1(919)123456</span>
+        <br><span>Email Address:james@james.com</span>
+    </div>
+    <hr>
+    <div id="step2" style="display:none">
+        <span>Pickup medicine</span>
+        <br><span>Name: Merrisa Vandy</span>
+        <br><span>Website: www.merrisa.com</span>
+        <br><span>Phone Number: +1(919)321456</span>
+        <br><span>Email Address:merrisa@merrisa.com</span>
+    </div>
+    <hr>
+    <div id="step3" style="display:none">
+        <span>Read lab result</span>
+        <br><s<br>Name: Tyler Ron<Rspan>
+        <br><span>Website: www.tyler.com</span>
+        <br><span>Phone Number: +1(919)345456</span>
+        <br><span>Email Address:tyler@tyler.com</span>
+    </div>
+    <hr>
+    <div id="step4" style="display:none">
+        <span>Ask questions</span>
+        <br><span>Name: Roy Swadh</span>
+        <br><span>Website: www.roy.com</span>
+        <br><span>Phone Number: +1(919)432456</span>
+        <br><span>Email Address:roy@roy.com</span>
+    </div>
+    </div>
     <div class="modal fade" id="graph" role="dialog">
     <div class="modal-dialog">
     
@@ -674,6 +724,88 @@
                   $('.graph').click(function() {
                       $('#graph').modal('show');
                   });
+
+                  
+                  var stepsCompleted = 0;
+
+                   $("#check1").change(function() {
+                    if ($(this).is(':checked')) {
+                         $("#nextStepsInfo").css("display", "block");
+                         $("#step1").css("display", "block");
+                         stepsCompleted=stepsCompleted+1;
+                         
+                    }else{
+                         $("#step1").css("display", "none");
+                         stepsCompleted=stepsCompleted-1;
+                         $("#done").css("display", "none");
+                    }
+                    if(stepsCompleted==0){
+                     $("#nextStepsInfo").css("display", "none");
+                     
+                     }
+                     else if(stepsCompleted==4){
+                      $("#done").css("display", "block");
+                     }
+                   });
+
+                   $("#check2").change(function() {
+                    if ($(this).is(':checked')) {
+                         $("#step2").css("display", "block");
+                         stepsCompleted=stepsCompleted+1;
+                         $("#nextStepsInfo").css("display", "block");
+                    }else{
+                         $("#step2").css("display", "none");
+                          stepsCompleted=stepsCompleted-1;
+                           $("#done").css("display", "none");
+                    }
+                    if(stepsCompleted==0){
+                     $("#nextStepsInfo").css("display", "none");
+                    
+                     }
+                     else if(stepsCompleted==4){
+                      $("#done").css("display", "block");
+                     }
+                   });
+
+                   $("#check3").change(function() {
+                    if ($(this).is(':checked')) {
+                         $("#step3").css("display", "block");
+                         stepsCompleted=stepsCompleted+1;
+                         $("#nextStepsInfo").css("display", "block");
+                    }else{
+                         $("#step3").css("display", "none");
+                          stepsCompleted=stepsCompleted-1;
+                          $("#done").css("display", "none");
+                    }
+                    if(stepsCompleted==0){
+                     $("#nextStepsInfo").css("display", "none");
+                      
+                     }
+                     else if(stepsCompleted==4){
+                      $("#done").css("display", "block");
+                     }
+                   });
+
+                   $("#check4").change(function() {
+                    if ($(this).is(':checked')) {
+                         $("#step4").css("display", "block");
+                         stepsCompleted=stepsCompleted+1;
+                         $("#nextStepsInfo").css("display", "block");
+                    }else{
+                         $("#step4").css("display", "none");
+                          stepsCompleted=stepsCompleted-1;
+                          $("#done").css("display", "none");
+                    }
+                    if(stepsCompleted==0){
+                     $("#nextStepsInfo").css("display", "none");
+                     
+                     }
+                     else if(stepsCompleted==4){
+                      $("#done").css("display", "block");
+                     }
+                   });
+
+
 
                 </script>
               </body>
