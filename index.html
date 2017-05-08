@@ -94,7 +94,14 @@
       left: 42%;
       transition: all 200ms ease-in;
     }
-
+	.fixmenu{
+	   top: 40%
+       left: 20;
+       position: fixed;
+       z-index: 3000;
+	   display: block;
+	   width: 20%;
+	}
 
     .li.complete .status:before {
       background-color: #56a1da;
@@ -588,7 +595,7 @@
    </div>
  </nav>
  <ul class="timeline" id="timeline">
-  <li class="li complete" style="margin-top: 37px;"><i class="fa fa-arrow-left fa-6" aria-hidden="true"></i></li>
+  <li class="li complete" style="margin-top: 38px;"><i class="fa fa-arrow-left fa-6" aria-hidden="true"></i></li>
   <li class="li" id = "hid" style="display: none;">
     <div class="timestamp">
       <span class="date">01/11/2017<span>
@@ -626,14 +633,14 @@
               <div class="status" id = "last-tl">
               </div>
             </li>
-            <li class="li complete disabled" style="margin-top: 37px;"><i class="fa fa-arrow-right fa-6" aria-hidden="true"></i></li>
+            <li class="li complete disabled" style="margin-top: 38px;"><i class="fa fa-arrow-right fa-6" aria-hidden="true"></i></li>
           </ul>
           <br/>
           <div class="container">
             <div class="row">
 
               <!-- Vertical Navbar -->
-              <div class="col-sm-3">
+              <div class="col-sm-3 fixmenu">
                 <div class="sidebar-nav">
                   <div class="navbar navbar-default" role="navigation">
                     <div class="navbar-header">
@@ -658,8 +665,8 @@
                   </div>
                 </div>
               </div>
-              <div id = "content-area">
-                <div class="col-sm-9 content" id = "summary-cont" style="background: #fff;  min-height: 300px; border-radius:4px;border-color: #eee; padding: 30px;">
+              <div id = "content-area" style="margin-left: 23%; width:100%">
+                <div class="col-sm-9 content" id = "summary-cont" style="background: #fff;  min-height: 300px; border-radius:4px;border-color: #eee; padding: 30px; display:bock;">
                   <div class="row date-app" style="text-align: center;">
                     <h4><i class="fa fa-calendar-o" aria-hidden="true"></i> Appointment Date 05/02/2017</h4>
                   </div>
@@ -762,67 +769,80 @@
                        <div class = "lab">
                         <div class="row vertical-align">
                           <div class="col-sm-2">
-                            RBC Count
+                            <h5><a data-toggle="modal" data-target="#rbccountModal">RBC Count</a> &nbsp;
+                            <a href="#"><i style="color: #444444" class="graph fa fa-line-chart" aria-hidden="true"></i></a></h5>
                           </div>
-                          <div class="col-sm-9">
-                            <img src = "./images/rbccount.PNG" />
-
-                            <div class="row" style="text-align: center;"><div class="col-sm-12">
-                              <a style="padding:5px; color:navy;" data-toggle="collapse" data-target="#learnmore1">Learn more</a>
-                            </div></div>
-                            <div id="learnmore1" class="collapse">
-                              <p>An RBC count is a blood test that measures how many red blood cells (RBCs) you have. </p>
-                              <p>RBCs contain hemoglobin, which carries oxygen. How much oxygen your body tissues get depends on how many RBCs you have and how well they work.</p>
+                          <div class="col-sm-10">
+                            <img src = "./images/rbccount.png" />
+                            <!-- Learn more modal -->
+                            <div class="modal fade" id="rbccountModal" role="dialog">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h4 class="modal-title" style="display: inline-block;">RBC Count</h4>
+                                    <a type="button" class="close" data-dismiss="modal" style="float:right">&times;</a>
+                                  </div>
+                                  <div class="modal-body">
+                                    <p>An RBC count is a blood test that measures how many red blood cells (RBCs) you have.</p>
+                                    <p>RBCs contain hemoglobin, which carries oxygen. How much oxygen your body tissues get depends on how many RBCs you have and how well they work.</p>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
-
-                          </div>
-                          <div class="col-sm-1">
-                            <a href="#"><i style="color: black" class="graph fa fa-line-chart" aria-hidden="true"></i></a>
                           </div>
                         </div>
                       </div>
 
-                      <div class = "lab">
-                        <div class="row vertical-align">
+                    <div class = "lab">
+                      <div class="row vertical-align">
                           <div class="col-sm-2">
-                            Hemoglobin
+                            <h5><a data-toggle="modal" data-target="#hemoglobinModal">Hemoglobin</a> &nbsp;
+                            <a href="#"><i style="color: #444444" class="graph fa fa-line-chart" aria-hidden="true"></i></a></h5>
                           </div>
-                          <div class="col-sm-9">
-                            <img src = "./images/hemoglobin.PNG" />
-
-                            <div class="row" style="text-align: center;"><div class="col-sm-12">
-                              <a style="padding:5px; color:navy;" data-toggle="collapse" data-target="#learnmore2">Learn more</a>
-                            </div></div>
-                            <div id="learnmore2" class="collapse">
-                              <p>Hemoglobin (Hb or Hgb) is a protein in red blood cells that carries oxygen throughout the body.</p>
-                              <p>In many cases, a low hemoglobin count is only slightly lower than normal and doesn't affect how you feel. If it gets more severe and causes symptoms, your low hemoglobin count may indicate you have anemia.</p>
+                          <div class="col-sm-10">
+                            <img src = "./images/hemoglobin.png" />
+                            <!-- Learn more modal -->
+                            <div class="modal fade" id="hemoglobinModal" role="dialog">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h4 class="modal-title" style="display: inline-block;">Hemoglobin</h4>
+                                    <a type="button" class="close" data-dismiss="modal" style="float:right">&times;</a>
+                                  </div>
+                                  <div class="modal-body">
+                                    <p>Hemoglobin (Hb or Hgb) is a protein in red blood cells that carries oxygen throughout the body.</p>
+                                    <p>In many cases, a low hemoglobin count is only slightly lower than normal and doesn't affect how you feel. If it gets more severe and causes symptoms, your low hemoglobin count may indicate you have anemia.</p>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
-
-                          </div>
-                          <div class="col-sm-1">
-                            <a href="#"><i style="color: black" class="graph fa fa-line-chart" aria-hidden="true"></i></a>
                           </div>
                         </div>
                       </div>
 
-                      <div class = "lab">
-                        <div class="row vertical-align">
+                    <div class = "lab">
+                      <div class="row vertical-align">
                           <div class="col-sm-2">
-                            Hematocrit
+                            <h5><a data-toggle="modal" data-target="#hematocritModal">Hematocrit</a> &nbsp;
+                            <a href="#"><i style="color: #444444" class="graph fa fa-line-chart" aria-hidden="true"></i></a></h5>
                           </div>
-                          <div class="col-sm-9">
-                            <img src = "./images/hematocrit.PNG" />
-
-                            <div class="row" style="text-align: center;"><div class="col-sm-12">
-                              <a style="padding:5px; color:navy;" data-toggle="collapse" data-target="#learnmore3">Learn more</a>
-                            </div></div>
-                            <div id="learnmore3" class="collapse">
-                              <p>Your hematocrit is the volume of red blood cells in your body. A hematocrit test measures the ratio of RBCs in your blood.</p>
-                              <p>A low hematocrit means the percentage of red blood cells is below the lower limits of normal.</p>
+                          <div class="col-sm-10">
+                            <img src = "./images/hematocrit.png" />
+                            <!-- Learn more modal -->
+                            <div class="modal fade" id="hematocritModal" role="dialog">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h4 class="modal-title" style="display: inline-block;">Hematocrit</h4>
+                                    <a type="button" class="close" data-dismiss="modal" style="float:right">&times;</a>
+                                  </div>
+                                  <div class="modal-body">
+                                    <p>Your hematocrit is the volume of red blood cells in your body. A hematocrit test measures the ratio of RBCs in your blood.</p>
+                                    <p>A low hematocrit means the percentage of red blood cells is below the lower limits of normal.</p>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
-                          </div>
-                          <div class="col-sm-1">
-                            <a href="#"><i style="color: black" class="graph fa fa-line-chart" aria-hidden="true"></i></a>
                           </div>
                         </div>
                       </div>
@@ -839,38 +859,23 @@
                     <div class="panel-group">
 
                       <div class="panel panel-default">
+
                         <div class="panel-heading">
                           <h5 class="panel-title">
-                           <div class="checkbox checkbox-success">
-                        <input id="appointment" class="styled" type="checkbox">
-                        <label for="appointment">
-                            
-                        </label>
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#content-area-1" href="#schedule_an_apointment">Schedule an apointment</a>
-                    </div>
-                            
+                            <div class="checkbox checkbox-success">
+                            <input id="appointment" class="styled" type="checkbox">
+                            <label for="appointment"></label>
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#content-area-1" href="#schedule_an_apointment">Schedule an Appointment</a>
+                            </div>
                           </h5>
                         </div>
+
                         <div id="schedule_an_apointment" class="panel-collapse collapse">
                           <div class="panel-body">
-                            <table id="next_step_1" class="table">
-                              <tr>
-                                <td>Name:</td>
-                                <td>James Anderson</td>
-                              </tr>
-                              <tr>
-                                <td>Phone:</td>
-                                <td>+1(919) 123-456</td>
-                              </tr>
-                              <tr>
-                                <td>Email:</td>
-                                <td>james@james.com</td>
-                              </tr>
-                              <tr>
-                                <td>Website:</td>
-                                <td> www.james.com</td>
-                              </tr>
-                            </table>
+                            <p>Please schedule an appointment for one month from this appointment. Contact information is available below.</p>
+                            
+                            <p><b>Phone</b>: +1(919) 123-4567</p>
+                            <p><b>Email</b>: scheduling@mydoctor.com</p>
 
                           </div>
                         </div>
@@ -879,36 +884,18 @@
                       <div class="panel panel-default">
                         <div class="panel-heading">
                           <h5 class="panel-title">
-                          <div class="checkbox checkbox-success">
-                        <input id="medicine-pick" class="styled" type="checkbox">
-                        <label for="medicine-pick">
-                           
-                        </label>
-                         <a class="accordion-toggle" data-toggle="collapse" data-parent="#content-area-1" href="#pickup_medicine">Pick up medicine</a>
-                    </div>
-                            
+                            <div class="checkbox checkbox-success">
+                            <input id="medicine-pick" class="styled" type="checkbox">
+                            <label for="medicine-pick"></label>
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#content-area-1" href="#pickup_medicine">Pickup Medicine</a>
+                            </div>
                           </h5>
                         </div>
+
                         <div id="pickup_medicine" class="panel-collapse collapse">
                           <div class="panel-body">
-                            <table id="next_step_1" class="table">
-                              <tr>
-                                <td>Name:</td>
-                                <td>Randy Watgreen</td>
-                              </tr>
-                              <tr>
-                                <td>Phone:</td>
-                                <td>+1(919) 321-456</td>
-                              </tr>
-                              <tr>
-                                <td>Email:</td>
-                                <td>randy@randy.com</td>
-                              </tr>
-                              <tr>
-                                <td>Website:</td>
-                                <td> www.randy.com</td>
-                              </tr>
-                            </table>
+                            <p>Your medications have been called in to your provided pharmacy, Rite Aid on Wade Avenue. Store information is available at the link below.</p>
+                            <a>Rite Aid - Wade Avenue</a>
 
                           </div>
                         </div>
@@ -930,24 +917,10 @@
                       </div>
                       <div id="read_lab_results" class="panel-collapse collapse">
                         <div class="panel-body">
-                          <table id="next_step_1" class="table">
-                            <tr>
-                              <td>Name:</td>
-                              <td>Veronica Stinson</td>
-                            </tr>
-                            <tr>
-                              <td>Phone:</td>
-                              <td>+1(919) 123-224</td>
-                            </tr>
-                            <tr>
-                              <td>Email:</td>
-                              <td>veronica@veronica.com</td>
-                            </tr>
-                            <tr>
-                              <td>Website:</td>
-                              <td> www.veronica.com</td>
-                            </tr>
-                          </table>
+                          <p>Please read the lab results and doctor notes, which can be found in the Lab Results tab. If you have any questions, please contact your doctor with the contact information provided below.</p>
+
+                          <div><b>John Smith</b></div>
+                          <div style="padding-left: 30px">Phone: (919) 260-8048<br/><a>Send message</a></div>
 
                         </div>
                       </div>
